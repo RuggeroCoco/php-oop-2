@@ -7,10 +7,15 @@ class Toy extends Product
     public $material;
     public $shape;
 
-    function __construct(String $_name, Float $_price, Category $_category, String $_image, String $_material, String $_shape)
+    function __construct(String $_name, Float $_price, Category $_category, String $_material, String $_shape,  String $_image = "default")
     {
         parent::__construct($_name, $_price, $_category, $_image);
         $this->material = $_material;
         $this->shape = $_shape;
+    }
+
+    function getDetails()
+    {
+        return "{$this->material}, {$this->shape}";
     }
 }

@@ -21,11 +21,16 @@ class Product
      * @param Category $_category
      * @param String $_image
      */
-    function __construct(String $_name, Float $_price, Category $_category, String $_image)
+    function __construct(String $_name, Float $_price, Category $_category, String $_image = "default")
     {
         $this->name = $_name;
         $this->price = $_price;
         $this->category = $_category;
         $this->image = $_image;
+    }
+
+    function getDetails()
+    {
+        return "";
     }
 }
